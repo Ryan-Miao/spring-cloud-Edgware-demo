@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: provider-demo
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+server:
+  port: 8082
+
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /swagger-resources/api-docs
+
+logstash:
+  url: localhost:4560
+
+log:
+  path: logs
+
+
+
