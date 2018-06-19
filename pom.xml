@@ -13,7 +13,6 @@
     <module>admin-server</module>
     <module>provider-demo</module>
     <module>consumer-demo</module>
-    <module>demo-message</module>
     <module>provider-api</module>
   </modules>
 

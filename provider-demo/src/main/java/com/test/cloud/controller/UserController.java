@@ -8,8 +8,6 @@ import io.swagger.annotations.Api;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @Api
 @RestController
-@RequestMapping("/api/v1/users")
 public class UserController implements UserApi {
 
     private List<User> users = Lists.newArrayList(
@@ -31,8 +28,12 @@ public class UserController implements UserApi {
     );
 
     @Override
-    @GetMapping("/")
     public List<UserVo> list() {
+        try {
+            Thread.sleep(2000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return users.stream()
             .map(u -> new UserVo(u.getId(), u.getName(), u.getAge(), u.getBirth()))
             .collect(Collectors.toList());
