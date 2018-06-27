@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: api-gateway
+
+
+server:
+  port: 8070
+
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /swagger-resources/api-docs
+
+logstash:
+  url: localhost:4560
+
+log:
+  path: logs
+
+
+ribbon.ConnectTimeout: 3000
+ribbon.ReadTimeout: 10000
