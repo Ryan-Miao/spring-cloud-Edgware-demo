@@ -22,6 +22,13 @@ log:
   path: logs
 
 
+#eureka client刷新本地缓存时间
+#默认30s
+eureka.client.registryFetchIntervalSeconds: 5
+#eureka客户端ribbon刷新时间
+#默认30s
+ribbon.ServerListRefreshInterval: 5000
+
 # ribbon默认配置
 #ribbon.ConnectTimeout=250
 #ribbon.ReadTimeout=1000
