@@ -29,11 +29,6 @@ public class UserController implements UserApi {
 
     @Override
     public List<UserVo> list() {
-        try {
-            Thread.sleep(2000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return users.stream()
             .map(u -> new UserVo(u.getId(), u.getName(), u.getAge(), u.getBirth()))
             .collect(Collectors.toList());

@@ -187,7 +187,7 @@
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>3.0.0</version>
           <configuration>
-            <configLocation>config/checkstyle/google-checks-6.18.xml</configLocation>
+            <configLocation>${project.basedir}/config/checkstyle/google-checks-6.18.xml</configLocation>
             <consoleOutput>true</consoleOutput>
             <encoding>UTF-8</encoding>
             <consoleOutput>true</consoleOutput>
