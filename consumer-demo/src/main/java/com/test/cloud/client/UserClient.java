@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 /**
  * @author Ryan Miao at 2018-06-15 10:31
  **/
-@FeignClient("PROVIDER-DEMO")
+@FeignClient(qualifier = "userClientTest", value = "PROVIDER-DEMO", fallback = UserClientFallback.class)
 public interface UserClient extends UserApi {
 
 }

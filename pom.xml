@@ -16,6 +16,7 @@
     <module>provider-api</module>
     <module>api-gateway</module>
     <module>build-tools</module>
+    <module>hystrix-dashboard</module>
   </modules>
 
   <properties>

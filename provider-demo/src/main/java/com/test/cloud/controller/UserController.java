@@ -7,6 +7,7 @@ import com.test.cloud.vo.UserVo;
 import io.swagger.annotations.Api;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,5 +33,16 @@ public class UserController implements UserApi {
         return users.stream()
             .map(u -> new UserVo(u.getId(), u.getName(), u.getAge(), u.getBirth()))
             .collect(Collectors.toList());
+    }
+
+    @Override
+    public String fallback() {
+        Random random = new Random();
+        boolean b = random.nextBoolean();
+        if (b){
+            return "成功返回.";
+        }
+
+        throw new RuntimeException("失败, 测试fallback.");
     }
 }

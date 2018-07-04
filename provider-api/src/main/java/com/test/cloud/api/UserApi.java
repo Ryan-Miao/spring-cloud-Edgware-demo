@@ -13,4 +13,7 @@ public interface UserApi {
 
     @GetMapping("/")
     List<UserVo> list();
+
+    @GetMapping("/fallback")
+    String fallback();
 }

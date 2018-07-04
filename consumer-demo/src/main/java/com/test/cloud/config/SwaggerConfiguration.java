@@ -1,6 +1,5 @@
 package com.test.cloud.config;
 
-
 import io.swagger.annotations.Api;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

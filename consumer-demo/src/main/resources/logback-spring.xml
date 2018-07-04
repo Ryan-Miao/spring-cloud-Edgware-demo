@@ -41,10 +41,11 @@
 
   <springProfile name="dev">
     <root level="info">
-      <appender-ref ref="console"/>
+      <!--<appender-ref ref="console"/>-->
       <appender-ref ref="file"/>
-      <appender-ref ref="LOGSTASH"/>
+      <!--<appender-ref ref="LOGSTASH"/>-->
     </root>
+    <logger name="com.test.cloud.client" level="debug"/>
 
   </springProfile>
   <springProfile name="test, prod">
