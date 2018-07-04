@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
   <springProperty scope="context" name="appName" source="spring.application.name"
-    defaultValue="j-d2-api"/>
+    defaultValue="unknown"/>
   <springProperty scope="context" name="log.path" source="log.path"
     defaultValue="logs"/>
   <springProperty scope="context" name="logstashurl" source="logstash.url"

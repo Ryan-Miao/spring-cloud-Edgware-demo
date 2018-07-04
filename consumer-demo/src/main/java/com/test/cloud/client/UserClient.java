@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 /**
  * @author Ryan Miao at 2018-06-15 10:31
  **/
-@FeignClient("provider-demo")
+@FeignClient("PROVIDER-DEMO")
 public interface UserClient extends UserApi {
 
 }
