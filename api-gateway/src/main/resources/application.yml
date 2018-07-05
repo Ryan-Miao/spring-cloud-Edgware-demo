@@ -20,13 +20,7 @@ log:
   path: logs
 
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 2000
