@@ -20,5 +20,17 @@ log:
   path: logs
 
 
-ribbon.ConnectTimeout: 3000
-ribbon.ReadTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 2000
+zuul:
+  host:
+    socket-timeout-millis: 10000
+    connect-timeout-millis: 2000
